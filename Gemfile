@@ -5,6 +5,7 @@ gem 'rails', '~> 5.2.1'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'hamlit'
+gem 'hamlit-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jefferies_tube', '1.0.3'
 gem 'puma', '~> 3.7'
