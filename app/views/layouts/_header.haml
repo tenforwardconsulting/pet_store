@@ -1,4 +1,7 @@
 %header
+  .nav
+    = link_to 'Stores', stores_path
+    = link_to 'Pets', pets_path
   .session
     - if current_user
       = link_to "Sign Out", destroy_user_session_path, method: :delete
