@@ -27,5 +27,7 @@ module PetStore
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end
