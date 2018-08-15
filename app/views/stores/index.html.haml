@@ -8,6 +8,7 @@
       %th Name
       %th Description
       %th
+
   %tbody
     - @stores.each do |store|
       %tr
@@ -15,4 +16,4 @@
         %td= store.description
         %td
           = link_to 'Edit', edit_store_path(store)
-          = link_to 'Delete', store_path(store), method: :delete
+          = link_to 'Delete', store_path(store), method: :delete, data: { confirm: 'Are you sure?' }

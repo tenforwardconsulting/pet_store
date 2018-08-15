@@ -15,7 +15,7 @@ class StoresController < ApplicationController
   def create
     @store = Store.new store_params
     if @store.save
-      redirect_to store_path(@store)
+      redirect_to @store, notice: 'Store was successfully created.'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class StoresController < ApplicationController
   def update
     @store = Store.find params[:id]
     if @store.update store_params
-      redirect_to store_path(@store)
+      redirect_to @store, notice: 'Store was successfully updated.'
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class StoresController < ApplicationController
   def destroy
     @store = Store.find params[:id]
     @store.destroy!
-    redirect_to stores_path
+    redirect_to stores_path, notice: 'Store was successfully deleted.'
   end
 
   private
