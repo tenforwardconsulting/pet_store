@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: 10fw/pet_shop
+    command: bash -c "rm -f /myapp/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/myapp
+      - bundle_cache:/bundle
+    ports:
+      - "3000:3000"
+    environment:
+      - DOCKERIZED=true
+volumes: 
+  bundle_cache: 
