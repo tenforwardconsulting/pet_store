@@ -16,9 +16,9 @@
 - elsif @pet.breed === 'Mut'
   %img= image_tag "dog1.jpg"
 
-%h2 Species: #{@pet.species}
-%h2 Breed: #{@pet.breed}
-%h2 Store: #{@pet.store.name}
+%h3 Species: #{@pet.species}
+%h3 Breed: #{@pet.breed}
+%h3 Store: #{@pet.store.name}
 
 
 = link_to 'Edit', edit_pet_path(@pet)

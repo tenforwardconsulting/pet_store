@@ -8,7 +8,7 @@
       %th Name
       %th Brand
       %th Quantity
-      %th
+      %th Store
 
   %tbody
     - @supplies.each do |supply|
@@ -16,6 +16,7 @@
         %td= supply.name
         %td= supply.brand
         %td= supply.quantity
+        %td= supply.store.name
         %td
           = link_to 'Edit', edit_supply_path(supply)
           = link_to 'Delete', supply, :method => :delete, :data => { :confirm => 'Are you sure?' }
