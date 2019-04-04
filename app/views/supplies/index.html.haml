@@ -1,0 +1,21 @@
+%h1 Supplies
+
+= link_to 'Add Suppies', new_supply_path
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Brand
+      %th Quantity
+      %th
+
+  %tbody
+    - @supplies.each do |supply|
+      %tr
+        %td= supply.name
+        %td= supply.brand
+        %td= supply.quantity
+        %td
+          = link_to 'Edit', edit_supply_path(supply)
+          = link_to 'Delete', supply, :method => :delete, :data => { :confirm => 'Are you sure?' }

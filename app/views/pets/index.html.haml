@@ -1,6 +1,9 @@
 %h1 Pets
 
-= link_to 'New Pet', new_pet_path
+= link_to 'Create a New Pet', new_pet_path
+
+%h6 Filter by:
+= render 'filter'
 
 %table
   %thead

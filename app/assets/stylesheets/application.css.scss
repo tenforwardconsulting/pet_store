@@ -12,11 +12,12 @@
  *
  *= require_self
  */
+@import "bootstrap";
+@import "variables";
 
-@import variables
+@import "header";
+@import "flash";
+@import "layout";
 
-@import header
-@import flash
-@import layout
+@import "stores";
 
-@import stores

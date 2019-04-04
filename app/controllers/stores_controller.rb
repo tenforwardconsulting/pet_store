@@ -45,4 +45,8 @@ class StoresController < ApplicationController
   def store_params
     params.require(:store).permit :name, :description
   end
+
+  def store_name
+    @store.show(@pet.store_id)
+  end
 end

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   resources :stores
   resources :pets
+  resources :supplies
 end

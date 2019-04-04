@@ -1,0 +1,10 @@
+%h1= @supply.name
+
+= link_to 'Edit', edit_supply_path(@supply)
+= link_to 'All Stores', supplies_path
+%h1= 'Available Supplies'
+- @supplies.each do |supply|
+  %ul
+    %li= supply.name
+    %li= supply.quantity
+
